@@ -1,13 +1,31 @@
 ;;=============================================================================
+;;	echossembly is a Linux NASM x64 echo server that repeats back content sent
+;;	back from the client. The program works most effectively with a telnet
+;;	client
 ;;
+;;	Build: 
+;;		nasm -f elf64 -d ELF_TYPE main.asm
+;;		gcc main.asm -o main.out
+;;	Execute:
+;;		./main.out
 ;;
-;;
-;;
-;;
+;; Sources:
+;;	http://stackoverflow.com/questions/32541055/why-do-i-get-eacces-after-invoking-socket-bind-in-nasm-linux-x64
+;;	https://ubuntuforums.org/archive/index.php/t-1105208.html
+;;	https://github.com/arno01/SLAE/blob/master/exam1/shell_bind_tcp.nasm
+;;	https://github.com/sathish09/SLAE-64/blob/master/Assignment%206/Bind-shell-TCP/original_shellcode.nasm
+;;	https://www.exploit-db.com/exploits/39149/
+;;	https://forum.nasm.us/index.php?topic=1638.0
+;;	http://stackoverflow.com/questions/9417341/linux-nasm-detect-eof
+;;	https://linux.die.net/man/2/read
+;;	https://www.csee.umbc.edu/portal/help/nasm/sample_64.shtml#printf1_64.asm
+;;	http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+;;	https://ubuntuforums.org/showthread.php?t=1105208
+;;	http://man7.org/linux/man-pages/man2/shutdown.2.html
 ;;
 ;;=============================================================================
 
-%include "asm_io.inc"
+;;%include "asm_io.inc"
 
 %define PROTO_FAM 			2					; AF_INET
 %define PROTO_TYPE			1					; SOCK_STREAM
