@@ -1,4 +1,4 @@
-#echossembly
+# echossembly
 echossembly is a simple POC exploratory program that experiments with TCP and Assembly. The project
 is written using NASM Assembly and is oriented towards x64 bit Linux Architectures
 
@@ -9,7 +9,7 @@ with the following commands
 sudo apt-get install build-essentials
 sudo apt-get install nasm
 ```
-#Setup
+# Setup
 Simply execute the Makefile to build the project. Run the following:
 * `make all` - Builds both the echo server and client
 * `make clean` - Cleans up all build components for the server and client
